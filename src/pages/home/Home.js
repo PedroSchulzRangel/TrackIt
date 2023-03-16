@@ -6,12 +6,12 @@ export default function Home(){
     return (<HomeContainer>
         <img src={logo} alt="logo-trackit"/>
         <form>
-        <input type="email" placeholder="email"/>
+        <input data-test="email-input" type="email" placeholder="email"/>
         <br/>
-        <input type="text" placeholder="senha"/>
+        <input data-test="password-input" type="text" placeholder="senha"/>
         <br/>
-        <button type="submit">Entrar</button>
+        <button data-test="login-btn" type="submit">Entrar</button>
         </form>
-        <Link to="/cadastro"><p>Não tem uma conta? Cadastre-se!</p></Link>
+        <Link to="/cadastro"><p data-test="signup-link">Não tem uma conta? Cadastre-se!</p></Link>
     </HomeContainer>);
 }
