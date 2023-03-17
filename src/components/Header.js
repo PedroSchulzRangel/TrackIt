@@ -3,7 +3,7 @@ import trackit from '../assets/TrackIt.png';
 import userImage from '../assets/user-image.png';
 
 export default function Header(){
-    return (<HeaderContainer>
+    return (<HeaderContainer data-test="header">
         <img src={trackit} alt="trackit-name"/>
         <UserImage src={userImage} alt="Profile-picture"/>
     </HeaderContainer>);

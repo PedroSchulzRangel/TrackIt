@@ -4,10 +4,11 @@ import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function Footer(){
-    return (<FooterContainer>
-        <Link to="/habitos"><HabitAndHistoricLink>Hábitos</HabitAndHistoricLink></Link>
+    return (<FooterContainer data-test="menu">
+        <Link to="/habitos" data-test="habit-link"><HabitAndHistoricLink>Hábitos</HabitAndHistoricLink></Link>
         <ProgressBarContainer>
             <CircularProgressbarWithChildren
+            data-test="today-link"
             value={66}
             background={true}
             backgroundPadding={6}
@@ -20,7 +21,7 @@ export default function Footer(){
             <Link to="/hoje"><LinkToday>Hoje</LinkToday></Link>
         </CircularProgressbarWithChildren>
     </ProgressBarContainer>
-    <Link to="/historico"><HabitAndHistoricLink>Histórico</HabitAndHistoricLink></Link>
+    <Link to="/historico" data-test="history-link"><HabitAndHistoricLink>Histórico</HabitAndHistoricLink></Link>
     </FooterContainer>);
 }
 
