@@ -39,6 +39,9 @@ button {
     font-size: 20.98px;
     line-height: 26.22px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 };
 p {
     color: #52b6ff;
