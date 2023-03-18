@@ -1,3 +1,9 @@
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
 export default function Today(){
-    return <div>Today</div>;
+    return <div>
+        <Header/>
+        <Footer/>
+    </div>;
 }

@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 import trackit from '../assets/TrackIt.png';
-import userImage from '../assets/user-image.png';
+import Context from '../Context';
+import { useContext } from 'react';
 
 export default function Header(){
+
+ const  [loginResponse,setLoginResponse] = useContext(Context);
+
     return (<HeaderContainer data-test="header">
         <img src={trackit} alt="trackit-name"/>
-        <UserImage src={userImage} alt="Profile-picture"/>
+        <UserImage src={loginResponse.image} alt="Profile-picture"/>
     </HeaderContainer>);
 }
 
@@ -26,4 +30,5 @@ const HeaderContainer = styled.div`
 const UserImage = styled.img`
 width: 51px;
 height: 51px;
+border-radius: 98.5px;
 `;

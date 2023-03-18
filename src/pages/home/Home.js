@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ThreeDots } from 'react-loader-spinner';
 import axios from "axios";
+import Context from '../../Context';
+import { useContext } from 'react';
 
 export default function Home(){
 
@@ -13,6 +15,7 @@ const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [disabled,setDisabled] = useState(false);
 const navigate = useNavigate();
+const [loginResponse, setLoginResponse] = useContext(Context);
 
 function sendUserLoginInfo(event){
     
@@ -27,6 +30,7 @@ function sendUserLoginInfo(event){
     const promise = axios.post(`${BASE_URL}auth/login`,body);
     promise.then((res) => {
         console.log(res.data);
+        setLoginResponse(res.data);
         navigate("/hoje");
         setEmail("");
         setPassword("");
