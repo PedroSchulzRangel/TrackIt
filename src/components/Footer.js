@@ -47,6 +47,7 @@ const HabitAndHistoricLink = styled.p`
 const ProgressBarContainer = styled.div`
     width: 91px;
     height: 91px;
+    margin-bottom: 40px;
 `;
 const LinkToday = styled.p`
     color: #ffffff;
