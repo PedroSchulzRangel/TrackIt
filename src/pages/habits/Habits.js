@@ -20,23 +20,23 @@ export default function Habits(){
             <h3>Meus hábitos</h3>
             <AiFillPlusSquare data-test="habit-create-btn"/>
         </TitleContainer>
-        <NewHabitContainer>
+        <NewHabitContainer data-test="habit-create-container">
             <form>
-            <input type="text" placeholder="nome do hábito" required/>
+            <input data-test="habit-name-input" type="text" placeholder="nome do hábito" required/>
             <br/>
             <WeekdaysContainer>
-            <button type="button">D</button>
-            <button type="button">S</button>
-            <button type="button">T</button>
-            <button type="button">Q</button>
-            <button type="button">Q</button>
-            <button type="button">S</button>
-            <button type="button">S</button>
+            <button data-test="habit-day" type="button">D</button>
+            <button data-test="habit-day" type="button">S</button>
+            <button data-test="habit-day" type="button">T</button>
+            <button data-test="habit-day" type="button">Q</button>
+            <button data-test="habit-day" type="button">Q</button>
+            <button data-test="habit-day" type="button">S</button>
+            <button data-test="habit-day" type="button">S</button>
             </WeekdaysContainer>
             <br/>
             <ResetSubmitButtonContainer>
-            <ResetButton type="reset">Cancelar</ResetButton>
-            <SubmitButton type="submit">Salvar</SubmitButton>
+            <ResetButton data-test="habit-create-cancel-btn" type="reset">Cancelar</ResetButton>
+            <SubmitButton data-test="habit-create-save-btn" type="submit">Salvar</SubmitButton>
             </ResetSubmitButtonContainer>
             </form>
         </NewHabitContainer>
