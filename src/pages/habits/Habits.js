@@ -20,6 +20,7 @@ export default function Habits(){
 
 const [loginResponse, setLoginResponse] = useContext(Context);
 const [habitsList, setHabitsList] = useState([]);
+const [habitsDeleted, sethabitsDeleted] = useState(0);
 
 useEffect(() => {
     const config = {
@@ -37,7 +38,7 @@ useEffect(() => {
         console.log(error.response.data);
         alert(error.response.data.message);
     });
-},[]);
+},[habitsDeleted]);
 
     return (
     <IconContext.Provider value={{color: "#52B6FF", size: "50px"}}>
@@ -69,7 +70,13 @@ useEffect(() => {
         </NewHabitContainer>
         {habitsList.length === 0 ?
         <Message>Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!</Message>
-        : habitsList.map((hab) => <Habit name={hab.name} days={hab.days}/>)}
+        : habitsList.map((hab) =>
+        <Habit
+        name={hab.name}
+        days={hab.days}
+        id={hab.id}
+        deleted={habitsDeleted}
+        setDeleted={sethabitsDeleted}/>)}
         <Footer/>
     </HabitsContainer>
     </IconContext.Provider>);
