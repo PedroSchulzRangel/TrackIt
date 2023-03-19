@@ -2,11 +2,14 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { AiFillPlusSquare } from 'react-icons/ai';
 import { IconContext } from 'react-icons';
-import { TitleContainer } from './StyleHabits';
-import { Message } from './StyleHabits';
-import { HabitsContainer } from './StyleHabits';
-import { weekdaysContainer } from './StyleHabits';
-import { NewHabitContainer } from './StyleHabits';
+import { TitleContainer,
+        Message,
+        HabitsContainer,
+        WeekdaysContainer,
+        NewHabitContainer,
+        ResetButton,
+        SubmitButton,
+        ResetSubmitButtonContainer} from './StyleHabits';
 
 export default function Habits(){
     return (
@@ -21,7 +24,7 @@ export default function Habits(){
             <form>
             <input type="text" placeholder="nome do hábito" required/>
             <br/>
-            <weekdaysContainer>
+            <WeekdaysContainer>
             <button type="button">D</button>
             <button type="button">S</button>
             <button type="button">T</button>
@@ -29,10 +32,12 @@ export default function Habits(){
             <button type="button">Q</button>
             <button type="button">S</button>
             <button type="button">S</button>
-            </weekdaysContainer>
+            </WeekdaysContainer>
             <br/>
-            <button type="reset">Cancelar</button>
-            <button type="submit">Salvar</button>
+            <ResetSubmitButtonContainer>
+            <ResetButton type="reset">Cancelar</ResetButton>
+            <SubmitButton type="submit">Salvar</SubmitButton>
+            </ResetSubmitButtonContainer>
             </form>
         </NewHabitContainer>
         <Message>Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!</Message>
