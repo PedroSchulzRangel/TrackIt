@@ -33,7 +33,7 @@ export const Message = styled.p`
     padding-left: 17px;
 `;
 export const NewHabitContainer = styled.div`
-    display: none;
+    display: ${props => props.newHab? "": "none"};
     background-color: #FFFFFF;
     width: 340px;
     height: 180px;
@@ -60,20 +60,37 @@ export const NewHabitContainer = styled.div`
 `;
 export const WeekdaysContainer = styled.div`
     margin-top: 8px;
-
-    button{
-        margin-right: 4px;
-        background-color: #ffffff;
-        border: 1px solid #d4d4d4;
-        width: 30px;
-        height: 30px;
-        border-radius: 5px;
-        font-family: 'Lexend Deca', sans-serif;
-        font-weight: 400;
-        font-size: 19.98px;
-        line-height: 24.97px;
-        color: #dbdbdb; 
-    }
+`;
+export const ButtonOfEachDay = styled.button`
+    background-color: ${props => {
+        if(props.days.includes(props.index)){
+            return "#cfcfcf";
+        } else {
+            return "#ffffff";
+        }
+    }};
+    color: ${props => {
+        if(props.days.includes(props.index)){
+            return "#ffffff";
+        } else {
+            return "#dbdbdb";
+        }
+    }};
+    margin-right: 4px;
+    border: 1px solid ${props => {
+        if(props.days.includes(props.index)){
+            return "#cfcfcf";
+        } else {
+            return "#d4d4d4";
+        }
+    }};
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 19.98px;
+    line-height: 24.97px;
 `;
 
 export const ResetSubmitButtonContainer = styled.div`

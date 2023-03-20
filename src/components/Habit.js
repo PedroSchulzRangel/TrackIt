@@ -37,7 +37,11 @@ export default function Habit({name, days, id, deleted, setDeleted}){
             <AiOutlineDelete onClick={() => setConfirmScreen(true)}/>
         </TitleContainer>
         <WeekdaysButtonsContainer>
-            {weekdays.map((d,i) => <ButtonOfEachDay index={i} selectedDays={days}>{d}</ButtonOfEachDay>)}
+            {weekdays.map((d,i) => 
+            <ButtonOfEachDay
+            key={i}
+            index={i}
+            selectedDays={days}>{d}</ButtonOfEachDay>)}
         </WeekdaysButtonsContainer>
     </HabitContainer>
     <ConfirmContainer confirm={confirmScreen}>
