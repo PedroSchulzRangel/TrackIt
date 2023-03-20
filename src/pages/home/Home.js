@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ThreeDots } from 'react-loader-spinner';
 import axios from "axios";
-import Context from '../../Context';
+import {Context} from '../../Context';
 import { useContext } from 'react';
 
 export default function Home(){

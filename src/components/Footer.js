@@ -2,14 +2,19 @@ import { CircularProgressbarWithChildren, buildStyles } from "react-circular-pro
 import 'react-circular-progressbar/dist/styles.css';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
+import {ContextHabitsConcluded} from '../Context';
+import {useContext} from 'react';
 
 export default function Footer(){
+
+    const [habitsConcluded, setHabitsConcluded] = useContext(ContextHabitsConcluded);
+
     return (<FooterContainer data-test="menu">
         <Link to="/habitos" data-test="habit-link"><HabitAndHistoricLink>Hábitos</HabitAndHistoricLink></Link>
         <ProgressBarContainer>
             <CircularProgressbarWithChildren
             data-test="today-link"
-            value={66}
+            value={habitsConcluded}
             background={true}
             backgroundPadding={6}
             styles={buildStyles({

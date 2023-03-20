@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import trackit from '../assets/TrackIt.png';
-import Context from '../Context';
+import {Context} from '../Context';
 import { useContext } from 'react';
 
 export default function Header(){

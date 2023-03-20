@@ -5,14 +5,16 @@ import Habits from './pages/habits/Habits';
 import Today from './pages/today/Today';
 import Historic from './pages/historic/Historic';
 import {useState} from 'react';
-import Context from './Context';
+import {Context, ContextHabitsConcluded} from './Context';
 
 function App() {
 
   const [loginResponse, setLoginResponse] = useState({});
+  const [habitsConcluded, setHabitsConcluded] = useState(0);
 
   return (
     <BrowserRouter>
+    <ContextHabitsConcluded.Provider value={[habitsConcluded, setHabitsConcluded]}>
      <Context.Provider value={[loginResponse, setLoginResponse]}>
     <Routes>
     <Route path="/" element={<Home/>}/>
@@ -22,6 +24,7 @@ function App() {
     <Route path="/historico" element={<Historic/>}/>
     </Routes>
     </Context.Provider>
+    </ContextHabitsConcluded.Provider>
     </BrowserRouter>
   );
 }

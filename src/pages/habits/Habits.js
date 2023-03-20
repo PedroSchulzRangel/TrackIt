@@ -12,7 +12,7 @@ import { TitleContainer,
         ResetSubmitButtonContainer,
         ButtonOfEachDay} from './StyleHabits';
 import { useEffect, useState, useContext } from 'react';
-import Context from '../../Context';
+import {Context} from '../../Context';
 import axios from 'axios';
 import BASE_URL from '../../url';
 import Habit from '../../components/Habit';

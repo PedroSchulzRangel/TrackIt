@@ -2,7 +2,7 @@ import weekdays from '../weekdays';
 import {AiOutlineDelete} from 'react-icons/ai';
 import styled from 'styled-components';
 import {useState, useContext} from 'react';
-import Context from '../Context';
+import {Context} from '../Context';
 import axios from 'axios';
 import BASE_URL from '../url';
 
