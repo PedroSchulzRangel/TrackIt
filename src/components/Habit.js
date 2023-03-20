@@ -31,14 +31,15 @@ export default function Habit({name, days, id, deleted, setDeleted}){
     }
 
     return (<>
-    <HabitContainer confirm={confirmScreen}>
+    <HabitContainer confirm={confirmScreen} data-test="habit-container">
         <TitleContainer>
-            <h3>{name}</h3>
-            <AiOutlineDelete onClick={() => setConfirmScreen(true)}/>
+            <h3 data-test="habit-name">{name}</h3>
+            <AiOutlineDelete data-test="habit-delete-btn" onClick={() => setConfirmScreen(true)}/>
         </TitleContainer>
         <WeekdaysButtonsContainer>
             {weekdays.map((d,i) => 
             <ButtonOfEachDay
+            data-test="habit-day"
             key={i}
             index={i}
             selectedDays={days}>{d}</ButtonOfEachDay>)}
