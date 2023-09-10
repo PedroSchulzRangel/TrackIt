@@ -4,7 +4,7 @@ A habits tracking app written in React that allows you to improve your disciplin
 
 ![Trackit](https://github.com/PedroSchulzRangel/TrackIt/assets/90806965/340cd15e-41db-450d-9c36-14aabf9e9a69)
 
-Try it out now at [this link](projeto-11-track-it-driven.vercel.app)
+Try it out now at [this link](https://projeto-11-track-it-driven.vercel.app)
 
 ### About
 
